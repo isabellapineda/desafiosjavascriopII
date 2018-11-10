@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>desafio3 JavaScript II</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+<body >
+	<form name="form1" >
+		
+		<input
+		 type="text" 
+		 name="nombre"
+		 id="nombre"
+		 onkeydown="return validarletra(event)"
+		 onkeypress="return validarletra(event)"
+		 placeholder="nombre">
+
+		 <input 
+		 type="text" 
+		 name="cedula"
+		 id="cedula" 
+		 onkeypress="return  validar_numero(event)" 
+		 onkeydown="return validar_numero(event)" 
+		 placeholder="Cedula">
+
+		 <input 
+		 type="text" 
+		 name="correo"
+		 id="correo" 
+		 placeholder="Correo">
+
+		 <input 
+		 type="text"
+		 name="telefono"
+		 id="telefono" 
+		 onkeypress="return  validar_numero(event)" 
+		 onkeydown="return validar_numero(event)" 
+		 placeholder="Telefono">
+
+		 <input 
+		 type="text" 
+		 name="usuario" 
+		 id="usuario"
+		 onblur="validarUsuario('usuario','campo1')" 
+		 placeholder="Usuario"><div id="campo1" name="campo1">El usuario debe tener mas de 4 caracteres</div>
+
+		 <input 
+		 type="password" 
+		 name="clave" 
+		 id="clave"
+
+		 placeholder="Clave"><div id="campo6">Este campo es obligatorio</div>
+
+		  <input 
+		 type="password" 
+		 name="conficlave" 
+		 id="conficlave" 
+		 placeholder="Confirmar Clave"><br><div id="conficampo1">Este campo es obligatorio</div>
+
+		 <input type="radio" name="sexo" >F 
+		 <input type="radio" name="sexo">M
+
+		 <p>fecha de nacimiento</p>
+		 <select  id="dia_na" name="dia_na" value="dia_na" onfocus= "dia('dia_na')">
+		 <option>Dia</option>
+		 </select>
+
+
+ 		 <select  id="mes" name="mes" value="mes">
+ 		  <option>Mes</option>	
+ 		 <option>Enero</option>
+ 		 <option>Febrero</option>
+ 		 <option>Marzo</option>
+ 		 <option>Abril</option>
+ 		 <option>Mayo</option>
+ 		 <option>Junio</option>
+ 		 <option>Julio</option>
+ 		 <option>Agosto</option>
+ 		 <option>Septiembre</option>
+ 		 <option>Octubre</option>
+ 		 <option>Noviembre</option>
+ 		 <option>Diciembre</option>
+ 		 </select>
+
+ 		 <select  id="año_na" name="año_na" value="año_na" onfocus="año('año_na')">
+ 		 <option>Año</option>
+ 		 </select>
+
+ 		<p>Seleccionar el curso</p>
+ 		  <select  id="curso" name="curso" value="curso">
+ 		  	 <option>Curso</option>
+	 		 <option>Java</option>
+	 		 <option>C++</option>
+	 		 <option>AutoCAD</option>
+	 		 <option>Canvas</option>
+	 		 <option>HTML5 y CSS3</option>
+	 		 <option>JS</option>
+	 		 <option>jQuery</option>
+ 		 </select>
+
+ 		  <select id="nivel">
+ 		  	<option>Nivel</option>
+ 		  	<option>I</option>
+ 		  	<option>II</option>
+ 		  	<option>III</option>
+ 		  </select><br>
+ 		  <input
+ 		   type="text" 
+ 		   name="hora" 
+ 		   id="hora"
+ 		   placeholder="Hora" ><div id="campohora">Este campo es obligatorio</div><br>
+
+
+ 		  <input type="button" name="registrar" value="Registrar">
+	</form>
+
+	<script src="lib_validaciones.js"></script>
+		<script src="desafio3.js"></script>
+
+</body>
+</html>

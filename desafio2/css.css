@@ -1,0 +1,6 @@
+div[id*="campo"]{
+	display: none;
+}
+div[id*="rango"]{
+	display: none;
+}

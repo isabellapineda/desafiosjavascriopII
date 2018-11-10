@@ -1,0 +1,104 @@
+f<!DOCTYPE html>
+<html>
+<head>
+		<script src="desafio1.js"></script>
+	<meta charset="utf-8">
+	<title>Desafio2 nivel II</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	
+</head>
+<body>
+	<form name="procesamiento">
+
+		<h1>Ingresar los siguientes datos</h1>
+
+
+	<p>Nombre</p>
+	<input
+		 type="text" 
+		 id="nombre" 
+		 name="nombre"
+		 onkeypress="return validarnombre(event)"
+		 onfocus="cambiarcolor('nombre')" 
+	     onblur="validar('nombre','campo1')"/> 
+    <div id="campo1">este campo es obligatorio</div>
+    
+
+	
+	<p>Nota del Desafio I</p> 
+	<input 
+		type="text" 
+		id="desafio1" 
+		name="desafio1"
+		onkeypress="return validarnumero(event)" 
+		onfocus="cambiarcolor('desafio1')" 
+	    onblur="validar('desafio1','campo2'); validacionRango('desafio1','rango')"/>
+	<div id="campo2" >este campo es obligatorio</div> 
+	<div  id="rango" >La nota debe estar en el rango de 0 a 100 </div>
+	
+	
+	 <p>Nota del Desafio II</p>
+	<input 
+		type="text" 
+		id="desafio2" 
+		name="desafio2"
+		onkeypress="return validarnumero(event)" 
+		onfocus="cambiarcolor('desafio2')" 
+	    onblur="validar('desafio2','campo3'); validacionRango('desafio2','rango1')"/>
+	<div id="campo3" >este campo es obligatorio</div>
+	<div  id="rango1" >La nota debe estar en el rango de 0 a 100 </div><br>
+	
+	 <p>Nota del Desafio III</p>
+	<input 
+		type="text" 
+		id="desafio3" 
+		name="desafio3"
+		onkeypress="return validarnumero(event)" 
+		onfocus="cambiarcolor('desafio3')" 
+	    onblur="validar('desafio3','campo4');validacionRango('desafio3','rango3')"/>
+	<div id="campo4" >este campo es obligatorio</div>
+	<div  id="rango3" >La nota debe estar en el rango de 0 a 100</div><br>
+	
+	<p>Nota del Desafio IV</p>
+	<input 
+		type="text" 
+		id="desafio4"
+		name="desafio4"
+		onkeypress="return validarnumero(event)" 
+		onfocus="cambiarcolor('desafio4')" 
+	    onblur="validar('desafio4','campo5');validacionRango('desafio4','rango4')"/>
+	<div id="campo5" >este campo es obligatorio</div>
+	<div  id="rango4" >La nota debe estar en el rango de 0 a 100</div><br>
+	
+	<p>Nota del Examen</p> 
+	<input 
+		type="text" 
+		id="examen" 
+		name="examen"
+		onkeypress="return validarnumero(event)"  
+		onfocus="cambiarcolor('examen')" 
+	    onblur="validar('examen','campo6');validacionRango('examen','rango5')"/>
+	<div id="campo6" >este campo es obligatorio</div>
+	<div  id="rango5" >La nota debe estar en el rango de 0 a 100</div><br>
+	
+	<p>Nota promedio</p> 
+	<input 
+	type="text"  
+	name="Promedio" /><br>
+
+	<input type="button" onclick="aprobacion()" value="Promedio ">
+	<input type="button" onclick="agrega()" value="Agregar">
+	
+	</form>
+	<div id="Alumnos">
+	 <p>Alumnos procesados</p>
+
+	</div>
+	<div id="promedio" onload="promediar()">
+		promedio 
+		
+	</div>
+
+
+</body>
+</html>
